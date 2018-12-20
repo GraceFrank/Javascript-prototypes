@@ -73,3 +73,17 @@ String.prototype.numberWords = function () {
     return numberToWords;
 
 }//end of numberWords Function
+
+//alternatingCase
+String.prototype.alternatingCase = function () {
+    alternateCaseString = "";
+
+    for (let indexOfString = 0; indexOfString < this.length; indexOfString++) {
+        if (indexOfString % 2 === 0) {
+            alternateCaseString += this[indexOfString].toLower();
+        } else {
+            alternateCaseString += this[indexOfString].toUpper();
+        }
+    }
+    return alternateCaseString;
+}
