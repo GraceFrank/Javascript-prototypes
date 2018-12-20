@@ -50,3 +50,8 @@ String.prototype.isQuestion = function () {
 String.prototype.word = function () {
     return this.match(/\w+-?\w*/g);
 }
+
+//word Count
+String.prototype.wordCount = function () {
+    return (this.match(/\d/g)).length;
+}
