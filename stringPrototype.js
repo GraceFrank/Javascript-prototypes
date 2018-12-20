@@ -45,3 +45,8 @@ String.prototype.ucFirst = function () {
 String.prototype.isQuestion = function () {
     return /\?\s*?$/.test(this);
 }
+
+//word
+String.prototype.word = function () {
+    return this.match(/\w+-?\w*/g);
+}
