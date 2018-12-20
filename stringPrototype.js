@@ -101,3 +101,5 @@ String.prototype.inverseCase = function() {
     }//end of forloop
     return stringInverse
 }//end of funcion inverseCase
+
+module.exports = String;
