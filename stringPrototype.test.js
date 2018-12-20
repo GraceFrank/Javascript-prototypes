@@ -73,34 +73,34 @@ test('that "3*3".toUpper Method returns "3*3"', () => {
 
 
 //toLower
-test('that string has a method toUpper ', () => {
+test('that string has a method toLower ', () => {
   expect('toLower' in String.prototype).toBe(true);
 });
 
-test('that toUpper Method returns string type', () => {
+test('that toLower Method returns string type', () => {
   expect(typeof ('word'.toLower())).toBe('string');
 });
 
-test('that toUpper Method returns string type', () => {
-  expect('HELP'.toUpper()).toBe('HELP');
+test('that "HELP".toLower Method returns  "help"', () => {
+  expect('HELP'.toLower()).toBe('help');
 });
 
-test('that toUpper Method returns string type', () => {
-  expect('SoLace'.toUpper()).toBe('SOLACE');
+test('that "help".toLower Method returns  "help"', () => {
+  expect('help'.toLower()).toBe('help');
 });
 
-test('that toUpper Method returns string type', () => {
-  expect('55scale'.toUpper()).toBe('55SCALE');
+test('that "SoLAce".toLower Method returns  "solace"', () => {
+  expect('SoLAce'.toLower()).toBe('solace');
 });
 
-test('that toUpper Method returns string type', () => {
-  expect('sql-server`'.toUpper()).toBe('SQL-SERVER`');
+test('that "SoLAce".toLower Method returns  "solace"', () => {
+  expect('SoLAce'.toLower()).toBe('solace');
 });
 
-test('that toUpper Method returns string type', () => {
-  expect('3e + 3e = 6e'.toUpper()).toBe('3E + 3E = 6E');
+test('that "55SSale".toLower Method returns  "55ssale"', () => {
+  expect('55SSale'.toLower()).toBe('55ssale');
 });
 
-test('that toUpper Method returns string type', () => {
-  expect('3*3'.toUpper()).toBe('3*3');
+test('that "2*2E = 4E".toLower Method returns  "2*2e = 4e"', () => {
+  expect('2*2E = 4E'.toLower()).toBe('2*2e = 4e');
 });
