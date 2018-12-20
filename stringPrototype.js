@@ -32,3 +32,11 @@ String.prototype.toLower = function () {
     }
     return capitalizedString;
 }
+
+//ucFirst
+String.prototype.ucFirst = function () {
+    uCFirstString = '';
+    /[a-z]/.test(this[0]) ? uCFirstString += this[0].toUpper() : uCFirstString += this[0];
+
+    return uCFirstString += this.substr(1, this.length - 1);
+}
