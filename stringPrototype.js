@@ -87,3 +87,17 @@ String.prototype.alternatingCase = function () {
     }
     return alternateCaseString;
 }
+
+//inverseCase
+String.prototype.inverseCase = function() {
+    let stringInverse = '';
+
+    for (let i = 0; i < this.length; i++) {
+        if (this[i] === this[i].toUpper()) {
+            stringInverse += this[i].toLower();
+        } else {
+            stringInverse += this[i].toUpper();
+        }
+    }//end of forloop
+    return stringInverse
+}//end of funcion inverseCase
