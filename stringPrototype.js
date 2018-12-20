@@ -60,3 +60,16 @@ String.prototype.wordCount = function () {
 String.prototype.isDigit = function () {
     return /^\d$/.test(this);
 }
+
+//numberWords
+String.prototype.numberWords = function () {
+
+    wordNumber = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+    numberToWords = '';
+
+    for (let i = 0; i < this.length; i++) {
+        numberToWords += wordNumber[this[i]] + ' ';
+    }//end of for loop
+    return numberToWords;
+
+}//end of numberWords Function
