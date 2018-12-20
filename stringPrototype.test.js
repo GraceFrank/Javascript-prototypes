@@ -176,3 +176,94 @@ test('"__what is your name+_ " is a question', () => {
 test('"__what is your name+_ " is a question', () => {
   expect('__what is your name_ '.isQuestion()).toBeFalsy();
 });
+
+//words
+test('that String class has a method words ', () => {
+  expect('word' in String.prototype).toBeTruthy();
+});
+
+test('that word Method returns object type', () => {
+  expect(typeof ('word'.word())).toBe('object');
+});
+
+test('that word Method returns all words in a string', () => {
+  expect('word of God is good'.word()).toEqual(["word", 'of', 'God', 'is', 'good']);
+});
+
+test('that word Method returns wordsjoined with - are counted as one word in a string', () => {
+  expect('word-of mouth is good'.word()).toEqual(['word-of','mouth', 'is', 'good']);
+});
+
+//wordCount
+test('that String class has a method wordCount ', () => {
+  expect('wordCount' in String.prototype).toBeTruthy();
+});
+
+test('that word Method returns object type', () => {
+  expect(typeof ('word'.wordCount())).toBe('number');
+});
+
+
+describe('  Returns the nubmer of words in a string', () => {
+  test('A simple case of a word', () => {
+    expect('boss'.wordCount()).toEqual(1);
+  });
+  test('a sentence of several word', () => {
+    expect('my name is 12 years old'.wordCount()).toEqual(6);
+  });
+});
+
+//Returns each letter in the string as an inverse of its current case
+describe('9.  Inverses the case of characters in a string', () => {
+  test('A simple case of a string', () => {
+    expect('Mr Ben'.inverseCase()).toEqual('mR bEN');
+  });
+  test('a case of a sentence', () => {
+    expect('I Love You'.inverseCase()).toEqual('i lOVE yOU');
+  });
+  test('a case of a sentence containing non-alphabets', () => {
+    expect('Will we go?'.inverseCase()).toEqual('wILL WE GO?');
+  });
+});
+
+//Alternates the case of a string starting with lower case
+describe('10. Alternates the case of characters in a string', () => {
+  test('A simple case of a string', () => {
+    expect('Onomatopoeia'.alternatingCase()).toEqual('oNoMaToPoEiA');
+  });
+  test('a case of all Upper case string', () => {
+    expect('MOVE'.alternatingCase()).toEqual('mOvE');
+  });
+  test('a case of a sentence containing non-alphabets', () => {
+    expect('car'.alternatingCase()).toEqual('cAr');
+  });
+});
+
+//numberWords
+describe('NumberWords return the numbers in a string with their equivalent words', () => {
+  test('case of a string of numbers', () => {
+    expect('39467'.numberWords()).toEqual('three nine four six seven');
+  });
+  test('A simple case of a string of a number', () => {
+    expect('2'.numberWords()).toEqual('two');
+  });
+  test('a case of a string containing numbers and alphabets', () => {
+    expect('2ac4'.numberWords()).toEqual('two four');
+  });
+  test('a case of a string containing only alphabets', () => {
+    expect('acuh'.numberWords()).toEqual('');
+  });
+});
+
+//Checks if a value is a digit
+describe('Checks if a value is a digit', () => {
+  test('A simple case of a string of a  number', () => {
+    expect('5'.isDigit()).toBeTruthy();
+  });
+  test('A simple case of a string of over a number', () => {
+    expect('24'.isDigit()).toBeFalsy();
+  });
+  test('a case of a string of an alphabet', () => {
+    expect('d'.isDigit()).toBeFalsy();
+  });
+});

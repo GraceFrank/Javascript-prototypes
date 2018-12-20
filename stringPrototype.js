@@ -51,10 +51,13 @@ String.prototype.word = function () {
     return this.match(/\w+-?\w*/g);
 }
 
+let wordss = '12abcd5';
 //wordCount
 String.prototype.wordCount = function () {
-    return (this.match(/\d/g)).length;
+
+   return this.word().length; 
 }
+
 
 //isDigit
 String.prototype.isDigit = function () {
@@ -65,14 +68,17 @@ String.prototype.isDigit = function () {
 String.prototype.numberWords = function () {
 
     wordNumber = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
-    numberToWords = '';
+    numberToWords = [];
 
     for (let i = 0; i < this.length; i++) {
-        numberToWords += wordNumber[this[i]] + ' ';
+       if (/\d/.test(this[i])){ numberToWords.push(wordNumber[this[i]]) };
     } //end of for loop
-    return numberToWords;
+    return numberToWords.join(' ');
 
 } //end of numberWords Function
+console.log(wordss.numberWords())
+
+
 
 //alternatingCase
 String.prototype.alternatingCase = function () {
