@@ -1,0 +1,26 @@
+{
+  "name": "stringproto",
+  "version": "1.0.0",
+  "description": "a simple classwork to test my understanding of  oop, tdd, git, github, and clean coding",
+  "main": "stringPrototype.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GraceFrank/first-pre-checkpoint.git"
+  },
+  "keywords": [
+    "string",
+    "prototype"
+  ],
+  "author": "Grace Frank",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GraceFrank/first-pre-checkpoint/issues"
+  },
+  "homepage": "https://github.com/GraceFrank/first-pre-checkpoint#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
