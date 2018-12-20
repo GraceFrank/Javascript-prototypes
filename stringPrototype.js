@@ -40,3 +40,8 @@ String.prototype.ucFirst = function () {
 
     return uCFirstString += this.substr(1, this.length - 1);
 }
+
+//isQuestion
+String.prototype.isQuestion = function () {
+    return /\?\s*?$/.test(this);
+}
