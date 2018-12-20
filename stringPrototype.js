@@ -17,3 +17,18 @@ String.prototype.toUpper = function () {
     }
     return capitalizedString;
 }
+
+//toLower
+String.prototype.toLower = function () {
+    let capitalizedString = '';
+
+    for (let i = 0; i < this.length; i++) {
+
+        if (/[A-Z]/.test(this[i])) {
+            capitalizedString += String.fromCharCode(this.charCodeAt(i) + 32);
+        } else {
+            capitalizedString += this[i];
+        }
+    }
+    return capitalizedString;
+}
