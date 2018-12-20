@@ -51,7 +51,12 @@ String.prototype.word = function () {
     return this.match(/\w+-?\w*/g);
 }
 
-//word Count
+//wordCount
 String.prototype.wordCount = function () {
     return (this.match(/\d/g)).length;
+}
+
+//isDigit
+String.prototype.isDigit = function () {
+    return /^\d$/.test(this);
 }
