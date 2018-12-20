@@ -1,6 +1,6 @@
 //hasVowel
 String.prototype.hasVowel = function hasVowel() {
-    return /[aeiou]/.test(this);
+    return /[aeiou]/i.test(this);
 }
 
 //toUpper
@@ -69,10 +69,10 @@ String.prototype.numberWords = function () {
 
     for (let i = 0; i < this.length; i++) {
         numberToWords += wordNumber[this[i]] + ' ';
-    }//end of for loop
+    } //end of for loop
     return numberToWords;
 
-}//end of numberWords Function
+} //end of numberWords Function
 
 //alternatingCase
 String.prototype.alternatingCase = function () {
@@ -89,7 +89,7 @@ String.prototype.alternatingCase = function () {
 }
 
 //inverseCase
-String.prototype.inverseCase = function() {
+String.prototype.inverseCase = function () {
     let stringInverse = '';
 
     for (let i = 0; i < this.length; i++) {
@@ -98,8 +98,9 @@ String.prototype.inverseCase = function() {
         } else {
             stringInverse += this[i].toUpper();
         }
-    }//end of forloop
+    } //end of forloop
     return stringInverse
-}//end of funcion inverseCase
+} //end of funcion inverseCase
+
 
 module.exports = String;
